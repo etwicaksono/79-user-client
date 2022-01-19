@@ -27,7 +27,7 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
             <a class="navbar-brand" href="{{ url("") }}">U-manage</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,11 +63,11 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li> --}}
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                {{-- <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
                         id="search-input">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btn-search">Search</button>
-                </form>
+                </form> --}}
             </div>
         </nav>
 

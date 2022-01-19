@@ -13,6 +13,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', "UserController@index");
+$router->get('/create-user', "UserController@index");
+$router->get('/delete-user', "UserController@index");
