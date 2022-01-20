@@ -39,13 +39,6 @@
         next: 'Next',
         prev: 'Prev',
         onPageClick: function (event, page) {
-            //fetch content and render here
-            $('#page-content').text('Page ' + page) + ' content here';
-            console.log("event");
-            console.log(event);
-            console.log("page");
-            console.log(page);
-
             $.ajax({
                 url:baseurl+"get-users",
                 method:"get",
@@ -56,9 +49,7 @@
                 },
                 error:function(err){
                     console.log(err);
-                },success:function(res){
-                    console.log(res);
-                    
+                },success:function(res){                    
                     let output=""
                     let counter = parseInt(res.offset) + 1
                     $.each(res.data,function(key, value){

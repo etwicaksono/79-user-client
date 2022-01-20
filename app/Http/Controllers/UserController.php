@@ -32,6 +32,18 @@ class UserController extends Controller
         }
     }
 
+    public function create()
+    {
+        return view("create-user", ["baseurl" => $this->baseurl]);
+    }
+
+    public function store(Request $request)
+    {
+        $result = Http::post($this->baseurl, [])->body();
+
+        return \response()->json([$result]);
+    }
+
     public function getUsers(Request $request)
     {
         $limit = $request->limit;
