@@ -16,3 +16,4 @@
 $router->get('/', "UserController@index");
 $router->get('/create-user', "UserController@index");
 $router->get('/delete-user', "UserController@index");
+$router->get('/get-users', "UserController@getUsers");
