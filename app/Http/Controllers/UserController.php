@@ -44,6 +44,27 @@ class UserController extends Controller
         return \response()->json([$result]);
     }
 
+    public function delete()
+    {
+        try {
+            $limit = 10;
+            $offset = 0;
+            $count = Http::get($this->baseurl . "/all-user-count")->json();
+            $visible_pages = 10;
+            return view("delete-user", [
+                "limit" => $limit,
+                "offset" => $offset,
+                "apiurl" => $this->baseurl,
+                "total_pages" => \ceil($count / $visible_pages)
+            ]);
+        } catch (Throwable $t) {
+            return \response()->json([
+                "error" => true,
+                "message" => $t->getMessage()
+            ]);
+        }
+    }
+
     public function getUsers(Request $request)
     {
         $limit = $request->limit;
